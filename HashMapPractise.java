@@ -38,5 +38,11 @@ public class Main
 		
 		char k = map.getOrDefault(4 , 'Z');
 		System.out.println(k);
+		
+		/* To Copy a HashMap content to another */
+		HashMap<Integer , Character> dup = new HashMap<>();
+		dup.putAll(map);
+		
+		System.out.println(dup);
 	}
 }
