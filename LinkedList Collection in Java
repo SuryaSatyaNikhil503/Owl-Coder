@@ -1,0 +1,55 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		LinkedList<Integer> lst = new LinkedList<>();
+		
+		int n = sc.nextInt();
+		
+		//adding elements at LinkedList
+		for(int i=0 ; i<n ; i++)
+		{
+		    int t = sc.nextInt();
+		    lst.add(t);
+		}
+		System.out.println(lst);
+		
+		//Adding number at beginning of the LinkedList
+		
+		lst.addFirst(6);
+		System.out.println(lst);
+		
+		//Adding numbers at last of the LinkedList
+		
+		lst.addLast(7);
+		System.out.println(lst);
+		
+		//Removing an element from LinkedList
+		
+		lst.remove(6);
+		System.out.println(lst);
+		
+		//Removing first element from LinkedList
+		
+		lst.removeFirst();
+		System.out.println(lst);
+		
+		//Removing last element from LinkedList
+		
+		lst.removeLast();
+		System.out.println(lst);
+		
+		//Getting value from particular Index
+		
+		//lst.get(3);
+		System.out.println(lst.get(3));
+		
+		//Getting First element from LinkedList
+		System.out.println(lst.getFirst());
+		
+		//Getting Last element from LinkedList
+		System.out.println(lst.getLast());
+	}
+}
