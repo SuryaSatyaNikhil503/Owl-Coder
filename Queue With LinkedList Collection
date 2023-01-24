@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		Queue<Integer> q = new LinkedList<>();
+		//add method
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		System.out.println(q);
+		//offer method
+		q.offer(4);
+		q.offer(5);
+		q.offer(6);
+		System.out.println(q);
+		//Element method
+		System.out.println(q.element());
+		//Remove method 
+		System.out.println(q.remove());
+		//poll method
+		System.out.println(q.poll());
+		//Iterating Queue using Iterator
+		Iterator<Integer> it = q.iterator();
+	    while(it.hasNext())
+		{
+		    System.out.print(it.next()+" ");
+		}
+	}
+}
