@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> arr = new ArrayList<>();
+		arr.add(10);
+		arr.add(10);
+		arr.add(20);
+		arr.add(20);
+		arr.add(30);
+		arr.add(40);
+		arr.add(40);
+		System.out.println(arr);//10,10,20,20,30,40,40
+		HashSet<Integer> set = new HashSet<>();
+		set.addAll(arr);
+		System.out.println(set); //20,40,10,30
+		TreeSet<Integer> tset = new TreeSet<>();
+		tset.addAll(arr);
+		System.out.println(tset); //10,20,30,40
+		//HashSet<ArrayList<Integer>> hlst = new HashSet<ArrayList<Integer>> ();
+		//ArrayList<Integer> lst = new ArrayList<>();
+		//lst.addAll(arr);
+		//HashSet<Integer> dups = new HashSet<>(lst);
+		
+		//System.out.println(dups);
+		//ArrayList<Integer> ans = new ArrayList<>();
+		//ans.addAll(dups);
+		//hlst.addAll(ans);
+		//hlst.add(dups);
+		//System.out.println("HashSet of ArrayList working Exp");
+		//System.out.println(hlst);
+	}
+}
