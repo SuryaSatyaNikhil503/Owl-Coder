@@ -1,0 +1,58 @@
+class Tree
+{
+    int data;
+    Tree left , right;
+    Tree(int data)
+    {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+public class Main
+{
+    Tree root = null;
+    public void insert(int newData) 
+    {
+        this.root = insert(root, newData);
+    }
+    public Tree insert(Tree root , int newData)
+    {
+        if(root == null) //whenever root vaue is null insert and update the root
+        {
+            root = new Tree(newData);
+            return root;
+        }
+        else if(root.data >= newData) // if root value is greater than the new value insert it at the left.
+        {
+            root.left = insert(root.left , newData);
+        }
+        else // if root value is less than the new value insert it at the right.
+        {
+            root.right = insert(root.right , newData);
+        }
+        return root;
+    }
+    void treeTraversal(Tree root)
+    {
+        if(root != null)
+        {
+            treeTraversal(root.left); // traverse throught the left part of the subtree
+            System.out.print(root.data+" ");
+            treeTraversal(root.right); // traverse throught the right part of the subtree
+        }
+    }
+	public static void main(String[] args) 
+	{
+	    Main obj = new Main();
+	    
+	    obj.insert(2);
+	    obj.insert(1);
+	    obj.insert(4);
+	    obj.insert(3);
+	    obj.insert(5);
+	    
+	    System.out.print("Binary Tree:" );
+	    obj.treeTraversal(obj.root);
+	}
+}
