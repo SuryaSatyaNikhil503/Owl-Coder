@@ -1,0 +1,39 @@
+class Tree
+{
+    int data;
+    Tree left , right;
+    Tree(int data)
+    {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+public class Main
+{
+    Tree root;
+    void treeTraversal(Tree root)
+    {
+        if(root != null)
+        {
+            treeTraversal(root.left); // traverse throught the left part of the subtree
+            System.out.print(root.data+" ");
+            treeTraversal(root.right); // traverse throught the right part of the subtree
+        }
+    }
+	public static void main(String[] args) 
+	{
+	    Main obj = new Main();
+	    
+	    obj.root = new Tree(1);
+	    obj.root.left = new Tree(2);
+	    obj.root.right = new Tree(3);
+	    obj.root.left.left = new Tree(4);
+	    obj.root.left.right = new Tree(5);
+	    obj.root.right.left = new Tree(6);
+	    obj.root.right.right = new Tree(7);
+	    
+	    System.out.print("Binary Tree:" );
+	    obj.treeTraversal(obj.root);
+	}
+}
