@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+    public static long solve(long num , long pow)
+    {
+        if(pow == 0) return 1;
+        
+        long res = solve(num , pow/2);
+        
+        if((pow & 1) == 1) return res * res * num;
+        else return res * res;
+    }
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		long num = sc.nextLong();
+		long pow = sc.nextLong();
+		
+		long ans = solve(num,pow);
+		System.out.println(ans);
+	}
+}
